@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">EndlessScrollSample</string>
+  <string name="list_title">Sample List %1$d</string>
+</resources>
