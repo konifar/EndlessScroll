@@ -106,6 +106,14 @@ afterEvaluate { project ->
   }
 }
 
+def getNexusUser() {
+  return hasProperty('NEXUS_USER') ? NEXUS_USER : ""
+}
+
+def getNexusPassword() {
+  return hasProperty('NEXUS_PASSWORD') ? NEXUS_PASSWORD : ""
+}
+
 def getBintrayUser() {
   return hasProperty('BINTRAY_USER') ? BINTRAY_USER : ""
 }
