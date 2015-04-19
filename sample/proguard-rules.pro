@@ -1,7 +1,4 @@
 -dontwarn com.konifar.**
--dontwarn com.squareup.okhttp.**
--dontwarn retrofit.**
--dontwarn okio.**
 
 -keep class com.konifar.** { *; }
 -keep interface com.konifar.** { *; }
@@ -9,10 +6,6 @@
 -keep class com.google.** { *; }
 -keep interface java.** { *; }
 -keep class java.** { *; }
--keep interface org.json.** { *; }
--keep class org.json.** { *; }
--keep interface retrofit.** { *; }
--keep class retrofit.** { *; }
 -keep interface android.** { *; }
 -keep class android.** { *; }
 
@@ -95,26 +88,3 @@
    private native <methods>;
    native <methods>;
 }
-
--dontwarn butterknife.internal.**
--keep class **$$ViewInjector { *; }
--keepnames class * { @butterknife.InjectView *;}
-
--keepclassmembers class ** {
-    public void onEvent*(**);
-}
-
-# Dagger
--dontwarn dagger.internal.codegen.**
--keepclassmembers,allowobfuscation class * {
-    @javax.inject.* *;
-    @dagger.* *;
-    <init>();
-}
--keep class dagger.* { *; }
--keep class javax.inject.* { *; }
--keep class * extends dagger.internal.Binding
--keep class * extends dagger.internal.ModuleAdapter
--keep class * extends dagger.internal.StaticInjection
-
--include ../proguard-com.twitter.sdk.android.twitter.txt
