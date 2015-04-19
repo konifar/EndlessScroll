@@ -1,4 +1,4 @@
-package com.konifar.endlessscroll;
+package com.konifar.endlessscroll.sample;
 
 import android.content.Context;
 import android.os.Build;

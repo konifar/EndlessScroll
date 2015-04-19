@@ -1,9 +1,10 @@
-package com.konifar.endlessscroll;
+package com.konifar.endlessscroll.sample;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
+import com.konifar.endlessscroll.EndlessScrollListener;
 import java.util.List;
 
 public class MainActivity extends FragmentActivity {
@@ -28,6 +29,11 @@ public class MainActivity extends FragmentActivity {
     adapter = new SampleListAdapter(this);
     ListView listView = (ListView) findViewById(R.id.list_view);
     listView.setAdapter(adapter);
+    listView.setOnScrollListener(new EndlessScrollListener() {
+      @Override public void onLoadMore(int page, int totalItemsCount) {
+        loadData(page);
+      }
+    });
     loadData(1);
   }
 

@@ -1,4 +1,4 @@
-package com.konifar.endlessscroll;
+package com.konifar.endlessscroll.sample;
 
 import android.content.Context;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.List;
 
 public class SampleModel {
 
-  private static final int PER = 10;
+  private static final int PER = 20;
 
   public static List<String> getSampleList(int page, Context context) {
     List<String> list = new ArrayList<>(PER);
